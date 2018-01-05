@@ -72,7 +72,7 @@ public class Main {
 	private static void gravarArquivo(String nomeArquivo) throws IOException {
 		FileWriter writer = new FileWriter(nomeArquivo);
 		PrintWriter printer = new PrintWriter(writer);
-		float tempoExecucao = 0;
+		float tempoExecucao = 0;	
 		printer.println(qtdConflitos);
 		
 		tempoExecucao = System.currentTimeMillis()-inicio;
@@ -96,13 +96,13 @@ public class Main {
 		//array com os naipes
 		for (int i = 0; i<5; i++) {
 			naipe[i] = jogada.charAt(j);
-			j = j + 3;
+			j += 3;
 		}
 		
 		//cria um array com os números das cartas
 		for(int k = 0; k<5; k++) {
 			num[k] = jogada.charAt(l);
-			l = l+3;
+			l += 3;
 		}
 		num = sort(num);
 		
